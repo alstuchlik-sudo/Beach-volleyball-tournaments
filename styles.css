@@ -1,0 +1,127 @@
+/* Basic reset so all browsers start from the same baseline */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- Retro pixel-game color palette ---- */
+:root {
+  --sky: #4ec9e0;
+  --sea: #1a7f9c;
+  --sand: #e8c07d;
+  --neon-pink: #ff3ec8;
+  --neon-cyan: #37f0d8;
+  --neon-yellow: #ffe14d;
+  --panel-dark: #142033;
+  --pixel-border: 4px;
+}
+
+/* Press Start 2P is a display font: great for headings/buttons,
+   too blocky to comfortably read in long paragraphs, so body text
+   stays in a plain monospace font instead. */
+body {
+  font-family: 'Courier New', monospace;
+  color: #eaf6ff;
+  line-height: 1.6;
+  padding: 0 1rem 2rem;
+  background-color: var(--sand);
+}
+
+h1, h2, h3, button {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+}
+
+/* ---- Hero: blocky sky/sea/sand bands, like a game background ---- */
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin: 0 -1rem 2rem;
+  background: linear-gradient(
+    to bottom,
+    var(--sky) 0%, var(--sky) 45%,
+    var(--sea) 45%, var(--sea) 75%,
+    var(--sand) 75%, var(--sand) 100%
+  );
+}
+
+header h1 {
+  color: var(--neon-pink);
+  font-size: 1.6rem;
+  line-height: 1.4;
+  text-shadow:
+    2px 2px 0 var(--neon-cyan),
+    -2px -2px 0 var(--neon-cyan),
+    2px -2px 0 var(--neon-cyan),
+    -2px 2px 0 var(--neon-cyan);
+}
+
+header p {
+  color: var(--panel-dark);
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* ---- Section headings ---- */
+main h2 {
+  color: var(--neon-pink);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 0 var(--panel-dark);
+}
+
+/* ---- Tournament list: lay the cards out in a responsive grid ---- */
+.tournament-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: 1rem 0 2rem;
+}
+
+.tournament-card {
+  border: var(--pixel-border) solid var(--neon-cyan);
+  padding: 1rem;
+  background-color: var(--panel-dark);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.tournament-card h3 {
+  color: var(--neon-yellow);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.tournament-prize {
+  color: var(--neon-yellow);
+  font-weight: bold;
+}
+
+/* ---- Pixel-style buttons: chunky border + hard offset "shadow" ---- */
+.register-btn,
+button {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: var(--pixel-border) solid var(--panel-dark);
+  background-color: var(--neon-pink);
+  color: #fff;
+  font-size: 0.75rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 var(--panel-dark);
+}
+
+.register-btn:hover,
+button:hover {
+  background-color: var(--neon-cyan);
+}
+
+/* Pressed-button feel: shift down when clicked */
+.register-btn:active,
+button:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}

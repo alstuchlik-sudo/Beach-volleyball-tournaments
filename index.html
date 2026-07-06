@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beach Volleyball Tournaments — Czech Republic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -17,10 +21,34 @@
     <section>
       <!-- List of the tournaments -->
       <h2>Upcoming Tournaments</h2>
-      <ul>
-        <li>Tournament 1 — City, Date</li>
-        <li>Tournament 2 — City, Date</li>
-        <li>Tournament 3 — City, Date</li>
+      <ul class="tournament-list">
+        <li class="tournament-card">
+          <h3>Brno Summer Cup</h3>
+          <p class="tournament-place">📍 Brno</p>
+          <p class="tournament-date">📅 Date TBD</p>
+          <p class="tournament-level">Level: Intermediate</p>
+          <p class="tournament-teams">Teams: 8 / 16</p>
+          <p class="tournament-prize">Prize money: 5 000 Kč</p>
+          <button class="register-btn">Register</button>
+        </li>
+        <li class="tournament-card">
+          <h3>Slavkov Open</h3>
+          <p class="tournament-place">📍 Slavkov u Brna</p>
+          <p class="tournament-date">📅 Date TBD</p>
+          <p class="tournament-level">Level: Beginner</p>
+          <p class="tournament-teams">Teams: 4 / 12</p>
+          <p class="tournament-prize">Prize money: 2 000 Kč</p>
+          <button class="register-btn">Register</button>
+        </li>
+        <li class="tournament-card">
+          <h3>Brno Masters</h3>
+          <p class="tournament-place">📍 Brno</p>
+          <p class="tournament-date">📅 Date TBD</p>
+          <p class="tournament-level">Level: Advanced</p>
+          <p class="tournament-teams">Teams: 12 / 12</p>
+          <p class="tournament-prize">Prize money: 10 000 Kč</p>
+          <button class="register-btn">Register</button>
+        </li>
       </ul>
     </section>
 
